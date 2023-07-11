@@ -10,7 +10,7 @@ function Logo() {
         width: 50,
       }}
       alt="Logo"
-      src="KK_black_letters.png"
+      src="/images/KK_black_letters.png"
     />
   );
 }

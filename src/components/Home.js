@@ -21,7 +21,7 @@ function Home() {
         >
           <img
             className="my_image"
-            src="pic.jpg"
+            src="images/pic.jpg"
             alt=""
             width="300vw"
             height="300vh"

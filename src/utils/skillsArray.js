@@ -27,7 +27,7 @@ export const skillsItems = [
   {
     name: "Redux",
     link: "https://redux.js.org/",
-    icon: <img src="/redux.png" alt="Redux" width="64" height="64" />,
+    icon: <img src="images/redux.png" alt="Redux" width="64" height="64" />,
   },
   {
     name: "Bootstrap",
@@ -42,7 +42,14 @@ export const skillsItems = [
   {
     name: "TypeScript",
     link: "https://www.typescriptlang.org/",
-    icon: <img src="/typescript.png" alt="TypeScript" width="64" height="64" />,
+    icon: (
+      <img
+        src="images/typescript.png"
+        alt="TypeScript"
+        width="64"
+        height="64"
+      />
+    ),
   },
   {
     name: "SQL",

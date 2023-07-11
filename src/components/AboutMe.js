@@ -6,7 +6,7 @@ import AboutMeSkills from "./AboutMeSkills";
 function AboutMe() {
   return (
     <Container className="body_container" maxWidth="lg">
-      <Typography className="heading" variant="h3">
+      <Typography className="header" variant="h3">
         About Me.
       </Typography>
       <Grid container spacing={10}>

@@ -13,9 +13,11 @@ function HomeInformation() {
       </Typography>
       <Typography className="my_name" variant="h2">
         <span className="first_name">Konstantinos&nbsp; </span>
-        <span className="last_name">Koufogiannakis  I love Gavriela.</span>
+        <span className="last_name">Koufogiannakis</span>
       </Typography>
-      <Typography className="h3_faded" variant="h3">I love to build things for the web.</Typography>
+      <Typography className="h3_faded" variant="h3">
+        I love to build things for the web.
+      </Typography>
       <Grid item xs={8}>
         <p className="short_sum">
           My role is to write and style the front-end components creating

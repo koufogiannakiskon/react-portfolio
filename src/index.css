@@ -143,8 +143,8 @@ img.my_image {
   }
 }
 
-.heading {
-  font-size: 45px;
+.header {
+  font-size: 45px !important;
   font-family: "PT Sans", sans-serif !important;
 }
 
@@ -166,4 +166,48 @@ article a {
   cursor: pointer;
   transition: all 0.3s ease-in;
   color: black;
+}
+
+/* Contact Info*/
+.fourth_row {
+  margin: 50px 0 50px 0;
+  padding: 100px 0 100px 0;
+}
+
+.contact-left {
+  margin-top: 30px;
+}
+
+.contact_info {
+  margin: 30px 0 30px 0;
+  padding-right: 0%;
+}
+
+.email {
+  color: #db4437;
+  cursor: pointer;
+  max-width: 300px;
+  filter: drop-shadow(1px 1px 1px #541914);
+  transition: all 0.3s ease-in;
+}
+
+.linkedin {
+  color: #0a66c2;
+  cursor: pointer;
+  max-width: 200px;
+  filter: drop-shadow(1px 1px 1px #06396d);
+  transition: all 0.3s ease-in;
+}
+
+.github {
+  color: #171515;
+  cursor: pointer;
+  max-width: 200px;
+  filter: drop-shadow(1px 1px 1px #000000);
+  transition: all 0.3s ease-in;
+}
+
+.contact_info:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease-in-out;
 }

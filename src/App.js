@@ -3,6 +3,8 @@ import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import AboutMe from "./components/AboutMe";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 
 const theme = createTheme({
   palette: {
@@ -24,6 +26,8 @@ function App() {
 
         <Home id="Home" />
         <AboutMe id="Aboutme" />
+        <Projects id="Projects" />
+        <Contact id="Contact" />
       </div>
     </ThemeProvider>
   );
