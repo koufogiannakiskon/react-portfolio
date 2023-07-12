@@ -1,14 +1,15 @@
 import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
+import ContactForm from "./ContactForm";
 
 function Contact() {
   return (
     <Container className="body_container fourth_row third_row" maxWidth="lg">
-      <Typography className="header" variant="h2">
-        Contact Me.
-      </Typography>
       <Grid container spacing={4}>
-        <Grid item sm={6}>
+        <Grid item md={6}>
+          <Typography className="header" variant="h2">
+            Contact Me.
+          </Typography>
           <Typography>Getting in touch is easy!</Typography>
           <div className="contact_carousel">
             <a
@@ -45,6 +46,9 @@ function Contact() {
               </li>
             </a>
           </div>
+        </Grid>
+        <Grid item md={6}>
+          <ContactForm />
         </Grid>
       </Grid>
     </Container>

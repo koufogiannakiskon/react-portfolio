@@ -5,14 +5,15 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
-const theme = createTheme({
+export const theme = createTheme({
   palette: {
     primary: {
       main: "#d5e5de",
     },
     secondary: {
-      main: "#d5e5de",
+      main: "rgb(240, 248, 255)",
     },
   },
 });
@@ -28,6 +29,7 @@ function App() {
         <AboutMe id="Aboutme" />
         <Projects id="Projects" />
         <Contact id="Contact" />
+        <Footer id="Footer" />
       </div>
     </ThemeProvider>
   );

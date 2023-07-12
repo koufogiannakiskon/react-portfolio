@@ -6,7 +6,14 @@ import "./../carousel.css";
 function CarouselBox() {
   return (
     <Container maxWidth="lg">
-      <Grid container spacing={4}>
+      <Grid
+        container
+        spacing={4}
+        sx={{
+          flexDirection: { xs: "column", sm: "row" },
+          alignItems: "center",
+        }}
+      >
         {projectsItems.map((item) => (
           <Grid item xs={12} sm={6} md={4} key={item.name}>
             <Box className="box">
