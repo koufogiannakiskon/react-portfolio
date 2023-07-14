@@ -75,7 +75,7 @@ function NavBar(props) {
             {navItems.map((item) => (
               <Link
                 component={Button}
-                to={`#${item}`}
+                href="#Projects"
                 key={item}
                 sx={{
                   color: "black",

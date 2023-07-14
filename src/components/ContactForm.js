@@ -1,7 +1,39 @@
 import { Button, Paper, TextField, Typography } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 
 function ContactForm() {
+  const isEmpty = (value) => value.trim() === "";
+
+  const [formInputsValidity, setFormInputsValidity] = useState({
+    name: false,
+    email: false,
+    message: false,
+  });
+
+  // Function that runs every time an input changes
+  const onBlurFunction = (event) => {
+    const { id, value } = event.target;
+    console.log(value);
+    if (id === "name") {
+      setFormInputsValidity({ ...formInputsValidity, [id]: isEmpty(value) });
+      console.log(formInputsValidity);
+    }
+    if (id === "email") {
+      setFormInputsValidity({
+        ...formInputsValidity,
+        [id]: !(value.includes("@") && value.includes(".")),
+      });
+      console.log(formInputsValidity);
+    }
+    if (id === "message") {
+      setFormInputsValidity({
+        ...formInputsValidity,
+        [id]: isEmpty(value),
+      });
+      console.log(formInputsValidity);
+    }
+  };
+
   return (
     <Paper component="form" className="contact_form_container" elevetion={6}>
       <Typography className="contact_form_paragraph">
@@ -13,6 +45,9 @@ function ContactForm() {
         label="Name"
         variant="standard"
         margin="dense"
+        onBlur={(e) => onBlurFunction(e)}
+        error={formInputsValidity.name}
+        helperText={formInputsValidity.name ? "Please enter your name." : ""}
         required
       />
       <TextField
@@ -20,6 +55,11 @@ function ContactForm() {
         label="Email"
         variant="standard"
         margin="dense"
+        onBlur={(e) => onBlurFunction(e)}
+        error={formInputsValidity.email}
+        helperText={
+          formInputsValidity.email ? "Please enter a valid email." : ""
+        }
         required
       />
       <TextField
@@ -29,9 +69,16 @@ function ContactForm() {
         rows={4}
         variant="standard"
         margin="dense"
+        onBlur={(e) => onBlurFunction(e)}
+        error={formInputsValidity.message}
+        helperText={formInputsValidity.message ? "Please enter a message." : ""}
         required
       />
-      <Button variant="contained" sx={{ backgroundColor: "#B6D2C5" }}>
+      <Button
+        type="submit"
+        variant="contained"
+        sx={{ backgroundColor: "#B6D2C5" }}
+      >
         Send
       </Button>
     </Paper>
