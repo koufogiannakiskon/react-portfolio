@@ -5,7 +5,7 @@ import AboutMeSkills from "./AboutMeSkills";
 
 function AboutMe() {
   return (
-    <Container className="body_container" maxWidth="lg">
+    <Container id="About me" className="body_container" maxWidth="lg">
       <Typography className="header" variant="h3">
         About Me.
       </Typography>

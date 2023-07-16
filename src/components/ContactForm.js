@@ -34,8 +34,17 @@ function ContactForm() {
     }
   };
 
+  const formSubmission = (event) => {
+    event.preventDefault();
+  };
+
   return (
-    <Paper component="form" className="contact_form_container" elevetion={6}>
+    <Paper
+      component="form"
+      className="contact_form_container"
+      elevetion={6}
+      onSubmit={formSubmission}
+    >
       <Typography className="contact_form_paragraph">
         Feel free to contact me by submitting the form below and I will get back
         to you as soon as possible.

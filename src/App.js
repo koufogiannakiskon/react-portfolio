@@ -25,10 +25,10 @@ function App() {
         <CssBaseline />
         <NavBar className="navBar" color={theme.palette.secondary} />
 
-        <Home id="Home" />
-        <AboutMe id="Aboutme" />
-        <Projects id="Projects" />
-        <Contact id="Contact" />
+        <Home />
+        <AboutMe />
+        <Projects />
+        <Contact />
         <Footer id="Footer" />
       </div>
     </ThemeProvider>

@@ -4,7 +4,7 @@ import HomeInformation from "./HomeInformation";
 
 function Home() {
   return (
-    <Container className="body_container" maxWidth="lg">
+    <Container id="Home" className="body_container" maxWidth="lg">
       <Grid container spacing={8}>
         <Grid item sm={12} md={7}>
           <HomeInformation />

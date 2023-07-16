@@ -64,7 +64,9 @@ function NavBar(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Logo />
+          <Link component={Button} href="#Home">
+            <Logo />
+          </Link>
 
           <Box
             sx={{
@@ -75,8 +77,8 @@ function NavBar(props) {
             {navItems.map((item) => (
               <Link
                 component={Button}
-                href="#Projects"
                 key={item}
+                href={`#${item}`}
                 sx={{
                   color: "black",
                   textTransform: "none",

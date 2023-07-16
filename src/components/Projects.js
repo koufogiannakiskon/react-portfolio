@@ -5,7 +5,12 @@ import CarouselBox from "./CarouselBox";
 
 function Projects() {
   return (
-    <Container className="body_container third_row" maxWidth="lg" spacing={4}>
+    <Container
+      id="Projects"
+      className="body_container third_row"
+      maxWidth="lg"
+      spacing={4}
+    >
       <Typography className="header" variant="h3">
         Projects.
       </Typography>

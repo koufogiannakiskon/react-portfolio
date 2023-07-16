@@ -4,7 +4,11 @@ import ContactForm from "./ContactForm";
 
 function Contact() {
   return (
-    <Container className="body_container fourth_row third_row" maxWidth="lg">
+    <Container
+      id="Contact"
+      className="body_container fourth_row third_row"
+      maxWidth="lg"
+    >
       <Grid container spacing={4}>
         <Grid item md={6}>
           <Typography className="header" variant="h2">
