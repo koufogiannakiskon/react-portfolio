@@ -10,8 +10,6 @@ import {
   Link,
   List,
   ListItem,
-  ListItemButton,
-  ListItemText,
   Toolbar,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -28,14 +26,24 @@ function NavBar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Logo />
+      <Link component={Button} href="#Home">
+        <Logo />
+      </Link>
       <Divider />
-      <List className="navbar-nav">
+      <List className="drawer_nav">
         {navItems.map((item) => (
-          <ListItem key={item} disablePadding className="nav-item">
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} className="nav-link" />
-            </ListItemButton>
+          <ListItem key={item} disablePadding>
+            <Link
+              component={Button}
+              href={`#${item}`}
+              sx={{
+                color: "black",
+                textTransform: "none",
+              }}
+              className=" drawer_navlink"
+            >
+              {item}
+            </Link>
           </ListItem>
         ))}
       </List>

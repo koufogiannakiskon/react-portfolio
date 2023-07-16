@@ -34,7 +34,9 @@ body::-webkit-scrollbar {
   left: 0;
   z-index: 1030;
 }
-
+.drawer_navlink {
+  width: 100%;
+}
 .nav-link {
   display: inline-block;
   margin-right: 15px;
