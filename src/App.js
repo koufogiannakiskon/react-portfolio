@@ -19,6 +19,19 @@ export const theme = createTheme({
 });
 
 function App() {
+  window.addEventListener("scroll", reveal);
+
+  function reveal() {
+    var reveals = document.querySelectorAll(".reveal");
+    reveals.forEach((row) => {
+      var windowheight = window.innerHeight;
+      var revealtop = row.getBoundingClientRect().top;
+      var revealpoint = 150;
+      if (revealtop < windowheight - revealpoint) {
+        row.classList.add("active");
+      }
+    });
+  }
   return (
     <ThemeProvider theme={theme}>
       <div sx={{ display: "flex" }}>

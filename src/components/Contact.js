@@ -6,7 +6,7 @@ function Contact() {
   return (
     <Container
       id="Contact"
-      className="body_container fourth_row third_row"
+      className="body_container fourth_row third_row reveal"
       maxWidth="lg"
     >
       <Grid container spacing={4}>

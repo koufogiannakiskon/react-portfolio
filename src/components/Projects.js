@@ -7,7 +7,7 @@ function Projects() {
   return (
     <Container
       id="Projects"
-      className="body_container third_row"
+      className="body_container third_row reveal"
       maxWidth="lg"
       spacing={4}
     >

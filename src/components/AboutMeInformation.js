@@ -3,7 +3,7 @@ import WorkExperience from "./WorkExperience";
 
 function AboutMeInformation() {
   return (
-    <div className="row second_row reveal">
+    <div className="row second_row">
       <p>
         My interest in programming started in my freshman year, as a Physics
         student. There, I was intrigued by the course <i>Computer Science I</i>

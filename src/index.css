@@ -27,6 +27,15 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+.reveal {
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 1s ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 .navBar {
   position: fixed;
@@ -63,8 +72,8 @@ body::-webkit-scrollbar {
 }
 
 .body_container {
-  margin-top: 50px;
-  padding: 80px 20px;
+  margin: 50px 0px;
+  padding: 100px 20px;
   box-shadow: none important!;
 }
 
