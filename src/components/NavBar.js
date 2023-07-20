@@ -13,6 +13,7 @@ import {
   Toolbar,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import ThemeToggle from "./ThemeToggle";
 
 const drawerWidth = 240;
 const navItems = ["About me", "Projects", "Contact"];
@@ -27,7 +28,7 @@ function NavBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Link component={Button} href="#Home">
-        <Logo />
+        <Logo theme={props.theme} />
       </Link>
       <Divider />
       <List className="drawer_nav">
@@ -55,7 +56,7 @@ function NavBar(props) {
 
   return (
     <>
-      <AppBar component="nav">
+      <AppBar component="nav" className="navBar">
         <Toolbar
           sx={{
             display: { sm: "flex" },
@@ -73,7 +74,7 @@ function NavBar(props) {
             <MenuIcon />
           </IconButton>
           <Link component={Button} href="#Home">
-            <Logo />
+            <Logo theme={props.theme} />
           </Link>
 
           <Box
@@ -96,6 +97,7 @@ function NavBar(props) {
                 {item}
               </Link>
             ))}
+            <ThemeToggle theme={props.theme} onChange={props.onChange} />
           </Box>
         </Toolbar>
       </AppBar>

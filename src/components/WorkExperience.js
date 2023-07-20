@@ -5,7 +5,7 @@ function WorkExperience() {
   return (
     <>
       {jobItems.map((item) => (
-        <article className="experience_paragraph" key={item}>
+        <article className="experience_paragraph" key={item.name}>
           <span className="date">
             {item.position} |&nbsp;
             <a

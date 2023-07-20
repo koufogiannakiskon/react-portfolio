@@ -1,15 +1,27 @@
 :root {
   --main-light-color: #fefcf6;
   --secondary-light-color: #d5e5de;
+  --main-dark-color: #1f3451;
+  --secondary-dark-color: #082032;
+  --text-dark-color: #f0f8ff;
 }
 
-body {
+body #light {
   margin: 0;
   font-family: "PT Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--main-light-color);
-  color: white;
+  color: #212529;
+  display: grid;
+}
+body #dark {
+  margin: 0;
+  font-family: "PT Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-dark-color);
+  color: #f0f8ff;
   display: grid;
 }
 
@@ -42,9 +54,17 @@ body::-webkit-scrollbar {
   right: 0;
   left: 0;
   z-index: 1030;
+  text-decoration: none;
+}
+#light .navBar {
+  background-color: var(--secondary-light-color) !important;
+}
+#dark .navBar {
+  background-color: var(--secondary-dark-color) !important;
 }
 .drawer_navlink {
   width: 100%;
+  text-decoration: none !important;
 }
 .nav-link {
   display: inline-block;
@@ -54,7 +74,10 @@ body::-webkit-scrollbar {
   padding-bottom: 0.25rem;
   position: relative;
   padding: 6px;
+  text-decoration: none !important;
+  opacity: 0.9;
 }
+
 .nav-link::before {
   bottom: 0;
   content: "";
@@ -69,6 +92,15 @@ body::-webkit-scrollbar {
 .nav-link:hover::before {
   width: 95%;
   left: 0;
+}
+.nav-link:hover {
+  opacity: 1;
+}
+#dark .nav-link {
+  color: var(--text-dark-color);
+}
+#dark .nav-link::before {
+  background: var(--text-dark-color);
 }
 
 .body_container {
@@ -230,14 +262,23 @@ article a {
   padding: 40px;
   background-color: #edede9 !important;
 }
+#dark .contact_form_container {
+  background-color: var(--secondary-dark-color) !important;
+  color: var(--text-dark-color);
+}
 
 .footer {
   margin-top: calc(10% + 60px);
   position: relative;
   bottom: 0;
   width: 100%;
-  background-color: #d5e5de !important;
+  background-color: var(--secondary-light-color);
   padding: 10px 0;
+}
+
+#dark .footer {
+  background-color: var(--secondary-dark-color);
+  color: var(--text-dark-color);
 }
 
 .footer_box {

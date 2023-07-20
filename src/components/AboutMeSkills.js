@@ -11,7 +11,7 @@ function AboutMeSkills() {
       </Typography>
 
       {skillsItems.map((item) => (
-        <Grid item xs={6} key={item}>
+        <Grid item xs={6} key={item.name}>
           <a
             href={item.link}
             aria-label={item.name}

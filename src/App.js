@@ -1,22 +1,13 @@
 import { CssBaseline } from "@mui/material";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
-import { ThemeProvider, createTheme } from "@mui/material/styles";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import { createContext, useState } from "react";
 
-export const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#d5e5de",
-    },
-    secondary: {
-      main: "rgb(240, 248, 255)",
-    },
-  },
-});
+export const ThemeContext = createContext(null);
 
 function App() {
   window.addEventListener("scroll", reveal);
@@ -32,11 +23,18 @@ function App() {
       }
     });
   }
+
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
+
   return (
-    <ThemeProvider theme={theme}>
-      <div sx={{ display: "flex" }}>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <div sx={{ display: "flex" }} className="App" id={theme}>
         <CssBaseline />
-        <NavBar className="navBar" color={theme.palette.secondary} />
+        <NavBar theme={theme} onChange={toggleTheme} />
 
         <Home />
         <AboutMe />
@@ -44,7 +42,7 @@ function App() {
         <Contact />
         <Footer id="Footer" />
       </div>
-    </ThemeProvider>
+    </ThemeContext.Provider>
   );
 }
 
