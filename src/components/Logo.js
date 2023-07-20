@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import React from "react";
 
-function Logo(theme) {
+function Logo(props) {
   return (
     <Box
       component="img"
@@ -11,7 +11,7 @@ function Logo(theme) {
       }}
       alt="Logo"
       src={
-        theme === "light"
+        props.theme === "light"
           ? "/images/KK_black_letters.png"
           : "/images/KK_white_letters.png"
       }
