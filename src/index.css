@@ -21,7 +21,7 @@ body #dark {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--main-dark-color);
-  color: #f0f8ff;
+  color: var(--text-dark-color);
   display: grid;
 }
 
@@ -48,7 +48,9 @@ body::-webkit-scrollbar {
   transform: translateY(0);
   opacity: 1;
 }
-
+.MuiPaper-root {
+  background-color: #9b9797 !important;
+}
 .navBar {
   position: fixed;
   right: 0;
@@ -163,6 +165,11 @@ body::-webkit-scrollbar {
   margin: 20px 0;
 }
 
+#dark button {
+  background-color: var(--text-dark-color);
+  color: var(--main-dark-color);
+}
+
 img.my_image {
   margin-top: 20px;
   border-radius: 50%;
@@ -264,6 +271,11 @@ article a {
 }
 #dark .contact_form_container {
   background-color: var(--secondary-dark-color) !important;
+  color: var(--text-dark-color) !important;
+}
+#dark label,
+#dark input,
+#dark textarea {
   color: var(--text-dark-color);
 }
 
@@ -277,7 +289,7 @@ article a {
 }
 
 #dark .footer {
-  background-color: var(--secondary-dark-color);
+  background-color: var(--secondary-dark-color) !important;
   color: var(--text-dark-color);
 }
 

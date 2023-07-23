@@ -51,6 +51,7 @@ function ContactForm() {
       </Typography>
       <TextField
         id="name"
+        className="textfield"
         label="Name"
         variant="standard"
         margin="dense"
@@ -58,9 +59,11 @@ function ContactForm() {
         error={formInputsValidity.name}
         helperText={formInputsValidity.name ? "Please enter your name." : ""}
         required
+        
       />
       <TextField
         id="email"
+        className="textfield"
         label="Email"
         variant="standard"
         margin="dense"
@@ -73,6 +76,7 @@ function ContactForm() {
       />
       <TextField
         id="message"
+        className="textfield"
         label="Message"
         multiline
         rows={4}

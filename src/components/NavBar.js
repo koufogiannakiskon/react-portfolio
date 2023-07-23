@@ -119,6 +119,7 @@ function NavBar(props) {
           }}
         >
           {drawer}
+          <ThemeToggle theme={props.theme} onChange={props.onChange} />
         </Drawer>
       </Box>
     </>

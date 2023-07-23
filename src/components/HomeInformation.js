@@ -24,7 +24,7 @@ function HomeInformation() {
           beautiful digital experiences. Currently, I'm focused on acquiring new
           skills in Web development.
         </p>
-        <Button variant="contained" disabled>
+        <Button className="resumeButton" variant="contained" disabled >
           Resume <LockIcon />
         </Button>
       </Grid>

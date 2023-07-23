@@ -2,7 +2,7 @@ export const jobItems = [
   {
     company: "Netcompany-Intrasoft",
     link: "https://www.netcompany-intrasoft.com",
-    color: "darkblue",
+    color: "#4055a3",
     position: "Software Test Analyst",
     date: "Aug 2021 - Aug 2022",
     details:
