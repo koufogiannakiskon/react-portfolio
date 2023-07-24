@@ -1,7 +1,7 @@
 import React from "react";
 import { projectsItems } from "../utils/projectsArray";
 import { Box, Container, Grid, Typography } from "@mui/material";
-import "./../carousel.css";
+import "./../css/carousel.css";
 
 function CarouselBox() {
   return (

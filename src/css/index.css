@@ -165,7 +165,8 @@ body::-webkit-scrollbar {
   margin: 20px 0;
 }
 
-#dark button {
+#dark .resumeButton,
+#dark .submitButton {
   background-color: var(--text-dark-color);
   color: var(--main-dark-color);
 }
@@ -284,7 +285,7 @@ article a {
   position: relative;
   bottom: 0;
   width: 100%;
-  background-color: var(--secondary-light-color);
+  background-color: var(--secondary-light-color) !important;
   padding: 10px 0;
 }
 

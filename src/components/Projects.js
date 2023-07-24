@@ -1,6 +1,6 @@
 import { Container, Typography } from "@mui/material";
 import React from "react";
-import "./../carousel.css";
+import "./../css/carousel.css";
 import CarouselBox from "./CarouselBox";
 
 function Projects() {

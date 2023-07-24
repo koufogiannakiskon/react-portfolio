@@ -32,6 +32,8 @@ function ThemeToggle(props) {
         }
         onColor="#d5e5de"
         offColor="#1f3451"
+        offHandleColor="#d5e5de"
+        onHandleColor="#1f3451"
       ></ReactSwitch>
     </div>
   );

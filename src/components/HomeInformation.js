@@ -19,12 +19,12 @@ function HomeInformation() {
         I love to build things for the web.
       </Typography>
       <Grid item xs={8}>
-        <p className="short_sum">
+        <Typography paragraph className="short_sum">
           My role is to write and style the front-end components creating
           beautiful digital experiences. Currently, I'm focused on acquiring new
           skills in Web development.
-        </p>
-        <Button className="resumeButton" variant="contained" disabled >
+        </Typography>
+        <Button className="resumeButton" variant="contained" disabled>
           Resume <LockIcon />
         </Button>
       </Grid>

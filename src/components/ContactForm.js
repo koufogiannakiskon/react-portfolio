@@ -3,6 +3,7 @@ import React, { useState } from "react";
 
 function ContactForm() {
   const isEmpty = (value) => value.trim() === "";
+  const [answer, setAnswer] = useState("");
 
   const [formInputsValidity, setFormInputsValidity] = useState({
     name: false,
@@ -13,29 +14,32 @@ function ContactForm() {
   // Function that runs every time an input changes
   const onBlurFunction = (event) => {
     const { id, value } = event.target;
-    console.log(value);
     if (id === "name") {
       setFormInputsValidity({ ...formInputsValidity, [id]: isEmpty(value) });
-      console.log(formInputsValidity);
     }
     if (id === "email") {
       setFormInputsValidity({
         ...formInputsValidity,
         [id]: !(value.includes("@") && value.includes(".")),
       });
-      console.log(formInputsValidity);
     }
     if (id === "message") {
       setFormInputsValidity({
         ...formInputsValidity,
         [id]: isEmpty(value),
       });
-      console.log(formInputsValidity);
     }
   };
 
   const formSubmission = (event) => {
     event.preventDefault();
+    if (
+      !formInputsValidity.email &&
+      !formInputsValidity.name &&
+      !formInputsValidity.message
+    ) {
+      setAnswer("Form Submitted");
+    }
   };
 
   return (
@@ -59,7 +63,6 @@ function ContactForm() {
         error={formInputsValidity.name}
         helperText={formInputsValidity.name ? "Please enter your name." : ""}
         required
-        
       />
       <TextField
         id="email"
@@ -88,12 +91,14 @@ function ContactForm() {
         required
       />
       <Button
+        className="submitButton"
         type="submit"
         variant="contained"
         sx={{ backgroundColor: "#B6D2C5" }}
       >
         Send
       </Button>
+      <Typography>{answer}</Typography>
     </Paper>
   );
 }

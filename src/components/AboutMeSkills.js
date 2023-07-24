@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid, Typography } from "@mui/material";
 import { skillsItems } from "../utils/skillsArray.js";
-import "./../skills_styles.css";
+import "./../css/skills_styles.css";
 
 function AboutMeSkills() {
   return (
