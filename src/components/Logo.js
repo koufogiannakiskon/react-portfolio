@@ -12,8 +12,8 @@ function Logo(props) {
       alt="Logo"
       src={
         props.theme === "light"
-          ? "/images/KK_black_letters.png"
-          : "/images/KK_white_letters.png"
+          ? "./images/KK_black_letters.png"
+          : "./images/KK_white_letters.png"
       }
     />
   );
