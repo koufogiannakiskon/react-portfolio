@@ -23,4 +23,12 @@ export const projectsItems = [
     image: "images/ToDoList.png",
     githubUrl: "https://github.com/koufogiannakiskon/ToDo-List",
   },
+  {
+    name: "Weather App",
+    description:
+      "It fetches weather data from the OpenWeatherMap API, suggestions from the Geonames API and city images from the Unsplash API providing users with real-time weather information.",
+    href: "https://koufogiannakiskon.github.io/weather-app/",
+    image: "images/Weatherapp.png",
+    githubUrl: "https://github.com/koufogiannakiskon/weather-app",
+  },
 ];

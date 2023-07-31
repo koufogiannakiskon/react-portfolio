@@ -8,14 +8,15 @@ function CarouselBox() {
     <Container maxWidth="lg">
       <Grid
         container
-        spacing={4}
+        rowSpacing={2}
+        columnSpacing={{ sm: 12, lg: 2, xl: 12 }}
         sx={{
           flexDirection: { xs: "column", sm: "row" },
           alignItems: "center",
         }}
       >
         {projectsItems.map((item) => (
-          <Grid item xs={12} sm={6} md={4} key={item.name}>
+          <Grid item md={6} lg={6} xl={3} key={item.name}>
             <Box className="box">
               <div className="imgBx">
                 <img src={item.image} alt={item.name}></img>
