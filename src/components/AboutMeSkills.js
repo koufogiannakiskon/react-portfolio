@@ -6,7 +6,7 @@ import "./../css/skills_styles.css";
 function AboutMeSkills() {
   return (
     <Grid container spacing={2}>
-      <Typography>
+      <Typography className="text_mulish">
         Here are some of the Languages and Frameworks that I like to use.
       </Typography>
 

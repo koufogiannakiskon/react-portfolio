@@ -14,7 +14,7 @@ function Projects() {
       <Typography className="header" variant="h3">
         Projects.
       </Typography>
-      <Typography>
+      <Typography className="text_mulish">
         Here are some of the personal projects, created while learning new
         Programming languages and libraries.
       </Typography>

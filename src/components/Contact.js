@@ -14,7 +14,9 @@ function Contact() {
           <Typography className="header" variant="h2">
             Contact Me.
           </Typography>
-          <Typography>Getting in touch is easy!</Typography>
+          <Typography className="text_mulish">
+            Getting in touch is easy!
+          </Typography>
           <div className="contact_carousel">
             <a
               href="mailto:koufogiannakiskon@gmail.com"
